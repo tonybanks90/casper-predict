@@ -1,0 +1,10 @@
+# Casper Predict - Odra Configuration
+
+[[contracts]]
+fqn = "vault::Vault"
+
+[[contracts]]
+fqn = "market::Market"
+
+[[contracts]]
+fqn = "factory::MarketFactory"
