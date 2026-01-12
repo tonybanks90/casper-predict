@@ -43,7 +43,7 @@ const MarketDetail: React.FC = () => {
         }
     };
 
-    const getCategoryColor = (category: string) => {
+    const getCategoryColor = () => {
         const colors: Record<string, string> = {
             crypto: 'text-blue-400 bg-blue-500/10',
             sports: 'text-green-400 bg-green-500/10',
@@ -64,7 +64,7 @@ const MarketDetail: React.FC = () => {
                 <Card className="border-border/50">
                     <CardHeader>
                         <div className="flex items-center gap-3 mb-2">
-                            <Badge variant="secondary" className={`font-bold uppercase ${getCategoryColor(market.category)}`}>
+                            <Badge variant="secondary" className={`font-bold uppercase ${getCategoryColor()}`}>
                                 {market.category}
                             </Badge>
                             <span className="text-sm text-muted-foreground">Market #{market.id}</span>
@@ -115,8 +115,8 @@ const MarketDetail: React.FC = () => {
                             <button
                                 onClick={() => setSelectedOutcome(0)}
                                 className={`p-4 rounded-xl border transition-all text-center ${selectedOutcome === 0
-                                        ? 'bg-green-500/20 border-green-500 ring-2 ring-green-500/20'
-                                        : 'bg-card border-border hover:bg-accent'
+                                    ? 'bg-green-500/20 border-green-500 ring-2 ring-green-500/20'
+                                    : 'bg-card border-border hover:bg-accent'
                                     }`}
                             >
                                 <div className="text-green-500 font-bold text-lg">YES</div>
@@ -125,8 +125,8 @@ const MarketDetail: React.FC = () => {
                             <button
                                 onClick={() => setSelectedOutcome(1)}
                                 className={`p-4 rounded-xl border transition-all text-center ${selectedOutcome === 1
-                                        ? 'bg-red-500/20 border-red-500 ring-2 ring-red-500/20'
-                                        : 'bg-card border-border hover:bg-accent'
+                                    ? 'bg-red-500/20 border-red-500 ring-2 ring-red-500/20'
+                                    : 'bg-card border-border hover:bg-accent'
                                     }`}
                             >
                                 <div className="text-red-500 font-bold text-lg">NO</div>
